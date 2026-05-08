@@ -53,6 +53,8 @@ version = "0.4"
 
 [dependencies.rand]
 workspace = true
+# `rand::random()` (used by `TestRng::default`) is gated behind this feature in rand 0.10.
+features = ["thread_rng"]
 
 [dependencies.rand_xorshift]
 version = "0.5"
