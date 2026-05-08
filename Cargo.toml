@@ -39,17 +39,75 @@ members = [
   "node/sync/locators",
   "node/tcp",
   "utilities",
+  "snarkVM",
+  "snarkVM/algorithms",
+  "snarkVM/algorithms/cuda",
+  "snarkVM/circuit",
+  "snarkVM/circuit/account",
+  "snarkVM/circuit/algorithms",
+  "snarkVM/circuit/collections",
+  "snarkVM/circuit/environment",
+  "snarkVM/circuit/environment/witness",
+  "snarkVM/circuit/network",
+  "snarkVM/circuit/program",
+  "snarkVM/circuit/types",
+  "snarkVM/circuit/types/address",
+  "snarkVM/circuit/types/boolean",
+  "snarkVM/circuit/types/field",
+  "snarkVM/circuit/types/group",
+  "snarkVM/circuit/types/integers",
+  "snarkVM/circuit/types/scalar",
+  "snarkVM/circuit/types/string",
+  "snarkVM/console",
+  "snarkVM/console/account",
+  "snarkVM/console/algorithms",
+  "snarkVM/console/collections",
+  "snarkVM/console/network",
+  "snarkVM/console/network/environment",
+  "snarkVM/console/program",
+  "snarkVM/console/types",
+  "snarkVM/console/types/address",
+  "snarkVM/console/types/boolean",
+  "snarkVM/console/types/field",
+  "snarkVM/console/types/group",
+  "snarkVM/console/types/integers",
+  "snarkVM/console/types/scalar",
+  "snarkVM/console/types/string",
+  "snarkVM/curves",
+  "snarkVM/fields",
+  "snarkVM/ledger",
+  "snarkVM/ledger/authority",
+  "snarkVM/ledger/block",
+  "snarkVM/ledger/committee",
+  "snarkVM/ledger/narwhal",
+  "snarkVM/ledger/narwhal/batch-certificate",
+  "snarkVM/ledger/narwhal/batch-header",
+  "snarkVM/ledger/narwhal/data",
+  "snarkVM/ledger/narwhal/subdag",
+  "snarkVM/ledger/narwhal/transmission",
+  "snarkVM/ledger/narwhal/transmission-id",
+  "snarkVM/ledger/puzzle",
+  "snarkVM/ledger/puzzle/epoch",
+  "snarkVM/ledger/query",
+  "snarkVM/ledger/store",
+  "snarkVM/ledger/test-helpers",
+  "snarkVM/ledger/testchain-generator",
+  "snarkVM/metrics",
+  "snarkVM/parameters",
+  "snarkVM/synthesizer",
+  "snarkVM/synthesizer/error",
+  "snarkVM/synthesizer/process",
+  "snarkVM/synthesizer/program",
+  "snarkVM/synthesizer/snark",
+  "snarkVM/utilities",
+  "snarkVM/utilities/derives",
+  "snarkVM/wasm",
+  "snarkVM/plugins/slipstream_plugin_interface",
+  "snarkVM/plugins/slipstream_plugin_manager",
 ]
 
 [workspace.dependencies.aleo-std]
 version = "1.0.1"
-default-features = false
-
-[workspace.dependencies.snarkvm]
-#path = "../snarkVM"
-git = "https://github.com/ProvableHQ/snarkVM.git"
-rev = "5f6b502578cc"
-#version = "=4.6.0"
 default-features = false
 
 [workspace.dependencies.anyhow]
@@ -260,6 +318,330 @@ version = "=4.6.0"
 path = "utilities"
 version = "=4.6.0"
 
+[workspace.dependencies.snarkvm]
+path = "snarkVM"
+default-features = false
+
+[workspace.dependencies.snarkvm-algorithms]
+path = "snarkVM/algorithms"
+version = "=4.6.0"
+default-features = false
+
+[workspace.dependencies.snarkvm-algorithms-cuda]
+path = "snarkVM/algorithms/cuda"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit]
+path = "snarkVM/circuit"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-account]
+path = "snarkVM/circuit/account"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-algorithms]
+path = "snarkVM/circuit/algorithms"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-collections]
+path = "snarkVM/circuit/collections"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-environment]
+path = "snarkVM/circuit/environment"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-environment-witness]
+path = "snarkVM/circuit/environment/witness"
+version = "=4.6.0"
+default-features = false
+
+[workspace.dependencies.snarkvm-circuit-network]
+path = "snarkVM/circuit/network"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-program]
+path = "snarkVM/circuit/program"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-types]
+path = "snarkVM/circuit/types"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-types-address]
+path = "snarkVM/circuit/types/address"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-types-boolean]
+path = "snarkVM/circuit/types/boolean"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-types-field]
+path = "snarkVM/circuit/types/field"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-types-scalar]
+path = "snarkVM/circuit/types/scalar"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-types-string]
+path = "snarkVM/circuit/types/string"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console]
+path = "snarkVM/console"
+version = "=4.6.0"
+default-features = false
+
+[workspace.dependencies.snarkvm-console-account]
+path = "snarkVM/console/account"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-algorithms]
+path = "snarkVM/console/algorithms"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-collections]
+path = "snarkVM/console/collections"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-network]
+path = "snarkVM/console/network"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-network-environment]
+path = "snarkVM/console/network/environment"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-program]
+path = "snarkVM/console/program"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-types]
+path = "snarkVM/console/types"
+version = "=4.6.0"
+default-features = false
+
+[workspace.dependencies.snarkvm-console-types-address]
+path = "snarkVM/console/types/address"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-types-boolean]
+path = "snarkVM/console/types/boolean"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-types-field]
+path = "snarkVM/console/types/field"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-types-group]
+path = "snarkVM/console/types/group"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-types-integers]
+path = "snarkVM/console/types/integers"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-types-scalar]
+path = "snarkVM/console/types/scalar"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-console-types-string]
+path = "snarkVM/console/types/string"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-types-group]
+path = "snarkVM/circuit/types/group"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-circuit-types-integers]
+path = "snarkVM/circuit/types/integers"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-curves]
+path = "snarkVM/curves"
+version = "=4.6.0"
+default-features = false
+
+[workspace.dependencies.snarkvm-fields]
+path = "snarkVM/fields"
+version = "=4.6.0"
+default-features = false
+
+[workspace.dependencies.snarkvm-ledger]
+path = "snarkVM/ledger"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-authority]
+path = "snarkVM/ledger/authority"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-block]
+path = "snarkVM/ledger/block"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-committee]
+path = "snarkVM/ledger/committee"
+version = "=4.6.0"
+default-features = false
+
+[workspace.dependencies.snarkvm-ledger-narwhal]
+path = "snarkVM/ledger/narwhal"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-narwhal-data]
+path = "snarkVM/ledger/narwhal/data"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-narwhal-batch-header]
+path = "snarkVM/ledger/narwhal/batch-header"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-narwhal-batch-certificate]
+path = "snarkVM/ledger/narwhal/batch-certificate"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-narwhal-subdag]
+path = "snarkVM/ledger/narwhal/subdag"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-narwhal-transmission]
+path = "snarkVM/ledger/narwhal/transmission"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-narwhal-transmission-id]
+path = "snarkVM/ledger/narwhal/transmission-id"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-puzzle]
+path = "snarkVM/ledger/puzzle"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-puzzle-epoch]
+path = "snarkVM/ledger/puzzle/epoch"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-query]
+path = "snarkVM/ledger/query"
+version = "=4.6.0"
+default-features = false
+
+[workspace.dependencies.snarkvm-ledger-store]
+path = "snarkVM/ledger/store"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-slipstream-plugin-interface]
+path = "snarkVM/plugins/slipstream_plugin_interface"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-slipstream-plugin-manager]
+path = "snarkVM/plugins/slipstream_plugin_manager"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-ledger-test-helpers]
+path = "snarkVM/ledger/test-helpers"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-metrics]
+path = "snarkVM/metrics"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-parameters]
+path = "snarkVM/parameters"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-synthesizer]
+path = "snarkVM/synthesizer"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-synthesizer-error]
+path = "snarkVM/synthesizer/error"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-synthesizer-process]
+path = "snarkVM/synthesizer/process"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-synthesizer-program]
+path = "snarkVM/synthesizer/program"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-synthesizer-snark]
+path = "snarkVM/synthesizer/snark"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-utilities]
+path = "snarkVM/utilities"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-utilities-derives]
+path = "snarkVM/utilities/derives"
+version = "=4.6.0"
+
+[workspace.dependencies.snarkvm-wasm]
+path = "snarkVM/wasm"
+version = "=4.6.0"
+
+[workspace.dependencies.aleo-std-storage]
+default-features=false
+version = "1.0.1"
+
+[workspace.dependencies.cfg-if]
+version = "1.0.0"
+
+[workspace.dependencies.criterion]
+version = "0.7"
+
+[workspace.dependencies.dotenvy]
+version = "0.15"
+
+[workspace.dependencies.enum-iterator]
+version = "2.1"
+
+[workspace.dependencies.expect-test]
+version = "1.4.1"
+
+[workspace.dependencies.hex]
+version = "0.4.3"
+
+[workspace.dependencies.k256]
+version = "0.14.0-rc.8"
+features = [ "digest", "ecdsa" ]
+default-features = false
+
+[workspace.dependencies.lazy_static]
+version = "1.4"
+
+[workspace.dependencies.num-traits]
+version = "0.2"
+
+[workspace.dependencies.nom]
+version = "7.1"
+
+[workspace.dependencies.paste]
+version = "1"
+
+[workspace.dependencies.serial_test]
+version = "2.0"
+
+[workspace.dependencies.sha2]
+version = "0.11"
+default-features = false
+
+[workspace.dependencies.smallvec]
+version = "1.14"
+
+[workspace.dependencies.tempfile]
+version = "3.15"
+
+[workspace.dependencies.ureq]
+version = "3"
+default-features = false
+
+[workspace.dependencies.zeroize]
+version = "1"
+
+
 [[bin]]
 name = "snarkos"
 path = "snarkos/main.rs"
@@ -378,10 +760,6 @@ version = "0.9"
 
 [build-dependencies.walkdir]
 version = "2"
-
-# Override only ledger RocksDB settings without nesting the full snarkVM workspace.
-[patch."https://github.com/ProvableHQ/snarkVM.git"]
-snarkvm-ledger-store = { path = "snarkVM/ledger/store" }
 
 [profile.release]
 opt-level = 3
