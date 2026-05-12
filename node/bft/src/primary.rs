@@ -17,30 +17,12 @@ mod proposal_task;
 pub use proposal_task::ProposalTask;
 
 use crate::{
-    Gateway,
-    MAX_BATCH_DELAY,
-    MAX_LEADER_CERTIFICATE_DELAY,
-    MAX_WORKERS,
-    MIN_BATCH_DELAY,
-    PRIMARY_PING_INTERVAL,
-    Sync,
-    Transport,
-    WORKER_PING_INTERVAL,
-    Worker,
+    Gateway, MAX_BATCH_DELAY, MAX_LEADER_CERTIFICATE_DELAY, MAX_WORKERS, MIN_BATCH_DELAY, PRIMARY_PING_INTERVAL, Sync,
+    Transport, WORKER_PING_INTERVAL, Worker,
     events::{BatchPropose, BatchSignature, Event},
     helpers::{
-        PrimaryReceiver,
-        PrimarySender,
-        Proposal,
-        ProposalCache,
-        SignedProposals,
-        Storage,
-        assign_to_worker,
-        assign_to_workers,
-        fmt_id,
-        init_sync_channels,
-        init_worker_channels,
-        now,
+        PrimaryReceiver, PrimarySender, Proposal, ProposalCache, SignedProposals, Storage, assign_to_worker,
+        assign_to_workers, fmt_id, init_sync_channels, init_worker_channels, now,
     },
     spawn_blocking,
     sync::SyncCallback,
@@ -2694,10 +2676,10 @@ mod tests {
         // Try to process the batch proposal from the peer, should error.
         assert!(
             primary
-                .process_batch_propose_from_peer(peer_ip, BatchPropose {
-                    round: round + 1,
-                    batch_header: Data::Object(proposal.batch_header().clone())
-                })
+                .process_batch_propose_from_peer(
+                    peer_ip,
+                    BatchPropose { round: round + 1, batch_header: Data::Object(proposal.batch_header().clone()) }
+                )
                 .await
                 .is_err()
         );
@@ -2740,10 +2722,10 @@ mod tests {
         // Try to process the batch proposal from the peer, should error.
         assert!(
             primary
-                .process_batch_propose_from_peer(peer_ip, BatchPropose {
-                    round: round + 1,
-                    batch_header: Data::Object(proposal.batch_header().clone())
-                })
+                .process_batch_propose_from_peer(
+                    peer_ip,
+                    BatchPropose { round: round + 1, batch_header: Data::Object(proposal.batch_header().clone()) }
+                )
                 .await
                 .is_err()
         );

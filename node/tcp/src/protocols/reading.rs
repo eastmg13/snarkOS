@@ -16,9 +16,7 @@
 #[cfg(doc)]
 use crate::{Config, protocols::Handshake};
 use crate::{
-    ConnectionSide,
-    P2P,
-    Tcp,
+    ConnectionSide, P2P, Tcp,
     protocols::{ProtocolHandler, ReturnableConnection},
 };
 

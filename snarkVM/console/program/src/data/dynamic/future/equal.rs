@@ -107,12 +107,16 @@ mod tests {
     #[test]
     fn test_is_not_equal_checksum() {
         // Create dynamic futures with different arguments (thus different checksums).
-        let dynamic1 = create_dynamic_future("test.aleo", "foo", vec![Argument::Plaintext(
-            Plaintext::from_str("100u64").unwrap(),
-        )]);
-        let dynamic2 = create_dynamic_future("test.aleo", "foo", vec![Argument::Plaintext(
-            Plaintext::from_str("200u64").unwrap(),
-        )]);
+        let dynamic1 = create_dynamic_future(
+            "test.aleo",
+            "foo",
+            vec![Argument::Plaintext(Plaintext::from_str("100u64").unwrap())],
+        );
+        let dynamic2 = create_dynamic_future(
+            "test.aleo",
+            "foo",
+            vec![Argument::Plaintext(Plaintext::from_str("200u64").unwrap())],
+        );
 
         // They should not be equal due to different checksums.
         assert!(!*dynamic1.is_equal(&dynamic2));

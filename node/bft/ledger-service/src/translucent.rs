@@ -19,11 +19,7 @@ use snarkos_utilities::Stoppable;
 
 use snarkvm::{
     ledger::{
-        Block,
-        CheckBlockError,
-        Ledger,
-        PendingBlock,
-        Transaction,
+        Block, CheckBlockError, Ledger, PendingBlock, Transaction,
         committee::Committee,
         narwhal::{Data, Transmission, TransmissionID},
         puzzle::{Solution, SolutionID},

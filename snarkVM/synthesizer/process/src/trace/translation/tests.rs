@@ -20,8 +20,7 @@ use console::{
 };
 
 use crate::{
-    TranslationAssignment,
-    compute_console_dynamic_or_external_record_id,
+    TranslationAssignment, compute_console_dynamic_or_external_record_id,
     tests::test_utils::{CurrentAleo, CurrentNetwork},
 };
 

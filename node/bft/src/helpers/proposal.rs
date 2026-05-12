@@ -296,8 +296,7 @@ pub(crate) mod tests {
 #[cfg(test)]
 mod prop_tests {
     use crate::helpers::{
-        Proposal,
-        now,
+        Proposal, now,
         storage::prop_tests::{AnyTransmission, AnyTransmissionID, CryptoTestRng},
     };
     use snarkos_node_bft_events::committee_prop_tests::{CommitteeContext, ValidatorSet};

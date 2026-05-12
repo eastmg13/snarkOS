@@ -14,12 +14,7 @@
 // limitations under the License.
 
 use crate::{
-    CandidatePeer,
-    ConnectedPeer,
-    NodeType,
-    Outbound,
-    PeerPoolHandling,
-    bootstrap_peers,
+    CandidatePeer, ConnectedPeer, NodeType, Outbound, PeerPoolHandling, bootstrap_peers,
     messages::{DisconnectReason, Message, PeerRequest},
 };
 

@@ -18,16 +18,8 @@ use snarkos_node_network::{PeerPoolHandling, harden_socket};
 use snarkos_node_router::{
     Routing,
     messages::{
-        BlockRequest,
-        BlockResponse,
-        DataBlocks,
-        DisconnectReason,
-        MessageCodec,
-        PeerRequest,
-        Ping,
-        Pong,
-        PuzzleResponse,
-        UnconfirmedTransaction,
+        BlockRequest, BlockResponse, DataBlocks, DisconnectReason, MessageCodec, PeerRequest, Ping, Pong,
+        PuzzleResponse, UnconfirmedTransaction,
     },
 };
 use snarkos_node_tcp::{ConnectError, Connection, ConnectionSide, Tcp};

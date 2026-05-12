@@ -20,11 +20,7 @@ mod cache;
 use cache::BlockCache;
 
 use crate::{
-    TransactionStorage,
-    TransactionStore,
-    TransitionStorage,
-    TransitionStore,
-    atomic_batch_scope,
+    TransactionStorage, TransactionStore, TransitionStorage, TransitionStore, atomic_batch_scope,
     helpers::{Map, MapRead},
 };
 use console::{
@@ -34,14 +30,7 @@ use console::{
 };
 use snarkvm_ledger_authority::Authority;
 use snarkvm_ledger_block::{
-    Block,
-    ConfirmedTransaction,
-    Header,
-    Ratifications,
-    Rejected,
-    Solutions,
-    Transaction,
-    Transactions,
+    Block, ConfirmedTransaction, Header, Ratifications, Rejected, Solutions, Transaction, Transactions,
 };
 use snarkvm_ledger_narwhal_batch_certificate::BatchCertificate;
 use snarkvm_ledger_puzzle::{Solution, SolutionID};

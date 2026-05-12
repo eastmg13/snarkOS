@@ -22,10 +22,7 @@ use snarkvm::{
     console::network::Network,
     ledger::store::helpers::memory::BlockMemory,
     prelude::{
-        Address,
-        Locator,
-        VM,
-        Value,
+        Address, Locator, VM, Value,
         query::Query,
         store::{ConsensusStore, helpers::memory::ConsensusMemory},
     },

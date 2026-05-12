@@ -19,8 +19,7 @@ use snarkvm::{
         committee::Committee,
         narwhal::{BatchHeader, Transmission, TransmissionID},
         store::helpers::{
-            Map,
-            MapRead,
+            Map, MapRead,
             rocksdb::{
                 DataMap,
                 internal::{self, BFTMap, Database, MapID},

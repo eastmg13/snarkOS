@@ -25,11 +25,7 @@ use snarkos_account::Account;
 use snarkos_node_network::{ConnectionMode, NodeType};
 use snarkos_node_rest::Rest;
 use snarkos_node_router::{
-    Heartbeat,
-    Inbound,
-    Outbound,
-    Router,
-    Routing,
+    Heartbeat, Inbound, Outbound, Router, Routing,
     messages::{Message, UnconfirmedSolution, UnconfirmedTransaction},
 };
 use snarkos_node_sync::{BlockSync, Ping};

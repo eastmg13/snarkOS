@@ -17,15 +17,8 @@
 mod varuna {
     use crate::{
         snark::varuna::{
-            AHPForR1CS,
-            CircuitVerifyingKey,
-            VarunaHidingMode,
-            VarunaNonHidingMode,
-            VarunaSNARK,
-            VarunaVersion,
-            mode::SNARKMode,
-            proof::proof_size,
-            test_circuit::TestCircuit,
+            AHPForR1CS, CircuitVerifyingKey, VarunaHidingMode, VarunaNonHidingMode, VarunaSNARK, VarunaVersion,
+            mode::SNARKMode, proof::proof_size, test_circuit::TestCircuit,
         },
         traits::{AlgebraicSponge, SNARK},
     };
@@ -34,8 +27,7 @@ mod varuna {
 
     use snarkvm_curves::bls12_377::{Bls12_377, Fq, Fr};
     use snarkvm_utilities::{
-        CanonicalSerialize,
-        ToBytes,
+        CanonicalSerialize, ToBytes,
         rand::{TestRng, Uniform},
     };
 
@@ -351,19 +343,14 @@ mod varuna_hiding {
     use crate::{
         crypto_hash::PoseidonSponge,
         snark::varuna::{
-            CircuitVerifyingKey,
-            VarunaHidingMode,
-            VarunaSNARK,
-            VarunaVersion,
-            ahp::AHPForR1CS,
+            CircuitVerifyingKey, VarunaHidingMode, VarunaSNARK, VarunaVersion, ahp::AHPForR1CS,
             test_circuit::TestCircuit,
         },
         traits::{AlgebraicSponge, SNARK},
     };
     use snarkvm_curves::bls12_377::{Bls12_377, Fq, Fr};
     use snarkvm_utilities::{
-        FromBytes,
-        ToBytes,
+        FromBytes, ToBytes,
         rand::{TestRng, Uniform},
     };
 

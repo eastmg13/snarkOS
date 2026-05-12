@@ -22,8 +22,7 @@ use snarkvm_fields::{Field, One, SquareRootField, Zero};
 use snarkvm_utilities::{FromBytes, ToBytes, bititerator::BitIteratorBE, rand::Uniform, serialize::*};
 
 use rand::{
-    Rng,
-    RngExt,
+    Rng, RngExt,
     distr::{Distribution, StandardUniform},
 };
 use serde::{Deserialize, Serialize};

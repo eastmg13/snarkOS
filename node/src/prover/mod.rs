@@ -24,11 +24,7 @@ use crate::{
 use snarkos_account::Account;
 use snarkos_node_network::{ConnectionMode, NodeType, PeerPoolHandling};
 use snarkos_node_router::{
-    Heartbeat,
-    Inbound,
-    Outbound,
-    Router,
-    Routing,
+    Heartbeat, Inbound, Outbound, Router, Routing,
     messages::{Message, UnconfirmedSolution},
 };
 use snarkos_node_tcp::{

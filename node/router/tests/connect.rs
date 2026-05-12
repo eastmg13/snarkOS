@@ -18,8 +18,7 @@ use common::*;
 
 use snarkos_node_network::PeerPoolHandling;
 use snarkos_node_tcp::{
-    ConnectError,
-    P2P,
+    ConnectError, P2P,
     protocols::{Disconnect, Handshake, OnConnect},
 };
 use snarkvm::prelude::TestRng;

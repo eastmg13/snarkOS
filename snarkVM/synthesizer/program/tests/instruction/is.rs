@@ -25,14 +25,7 @@ use console::{
 };
 use snarkvm_synthesizer_process::{Process, Stack};
 use snarkvm_synthesizer_program::{
-    IsEq,
-    IsInstruction,
-    IsNeq,
-    Opcode,
-    Operand,
-    Program,
-    RegistersCircuit as _,
-    RegistersTrait as _,
+    IsEq, IsInstruction, IsNeq, Opcode, Operand, Program, RegistersCircuit as _, RegistersTrait as _,
 };
 
 type CurrentNetwork = MainnetV0;
@@ -186,10 +179,11 @@ fn check_is<const VARIANT: u8>(
         <CurrentAleo as circuit::Environment>::reset();
 
         // Attempt to finalize the valid operand case.
-        let mut registers = sample_finalize_registers(&stack, &function_name, &[
-            Plaintext::from(literal_a),
-            Plaintext::from(literal_a),
-        ])
+        let mut registers = sample_finalize_registers(
+            &stack,
+            &function_name,
+            &[Plaintext::from(literal_a), Plaintext::from(literal_a)],
+        )
         .unwrap();
         operation.finalize(&stack, &mut registers).unwrap();
 
@@ -282,10 +276,11 @@ fn check_is<const VARIANT: u8>(
         <CurrentAleo as circuit::Environment>::reset();
 
         // Attempt to finalize the valid operand case.
-        let mut registers = sample_finalize_registers(&stack, &function_name, &[
-            Plaintext::from(literal_a),
-            Plaintext::from(literal_b),
-        ])
+        let mut registers = sample_finalize_registers(
+            &stack,
+            &function_name,
+            &[Plaintext::from(literal_a), Plaintext::from(literal_b)],
+        )
         .unwrap();
         operation.finalize(&stack, &mut registers).unwrap();
 

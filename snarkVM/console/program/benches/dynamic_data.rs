@@ -18,15 +18,7 @@ extern crate criterion;
 
 use snarkvm_console_network::{MainnetV0, Network};
 use snarkvm_console_program::{
-    Argument,
-    DynamicFuture,
-    DynamicRecord,
-    Entry,
-    Future,
-    Identifier,
-    Literal,
-    Plaintext,
-    ProgramID,
+    Argument, DynamicFuture, DynamicRecord, Entry, Future, Identifier, Literal, Plaintext, ProgramID,
 };
 use snarkvm_console_types::U64;
 use snarkvm_utilities::{TestRng, Uniform};

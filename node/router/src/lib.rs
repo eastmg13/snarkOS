@@ -50,14 +50,7 @@ use crate::messages::{BlockRequest, Message, MessageCodec};
 use snarkos_account::Account;
 use snarkos_node_bft_ledger_service::LedgerService;
 use snarkos_node_network::{
-    CandidatePeer,
-    ConnectedPeer,
-    ConnectionMode,
-    NodeType,
-    Peer,
-    PeerPoolHandling,
-    Resolver,
-    bootstrap_peers,
+    CandidatePeer, ConnectedPeer, ConnectionMode, NodeType, Peer, PeerPoolHandling, Resolver, bootstrap_peers,
 };
 use snarkos_node_sync_communication_service::CommunicationService;
 use snarkos_node_tcp::{Config, ConnectionSide, Tcp};

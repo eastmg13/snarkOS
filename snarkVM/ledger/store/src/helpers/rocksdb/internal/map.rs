@@ -207,6 +207,21 @@ impl<
             //
             // The expected behavior is that either all the operations will be committed
             // or none of them will be.
+            // Parallelize key prefixing and value serialization; merging into `atomic_batch` stays sequential.
+            #[cfg(not(feature = "serial"))]
+            let prepared_operations = {
+                use rayon::prelude::*;
+                operations
+                    .into_par_iter()
+                    .map(|(key, value)| -> Result<_> {
+                        match value {
+                            Some(value) => Ok((self.create_prefixed_key(&key)?, Some(bincode::serialize(&value)?))),
+                            None => Ok((self.create_prefixed_key(&key)?, None)),
+                        }
+                    })
+                    .collect::<Result<Vec<_>>>()?
+            };
+            #[cfg(feature = "serial")]
             let prepared_operations = operations
                 .into_iter()
                 .map(|(key, value)| match value {
@@ -578,9 +593,7 @@ impl<K: Serialize + DeserializeOwned, V: Serialize + DeserializeOwned> fmt::Debu
 mod tests {
     use super::*;
     use crate::{
-        FinalizeMode,
-        atomic_batch_scope,
-        atomic_finalize,
+        FinalizeMode, atomic_batch_scope, atomic_finalize,
         helpers::rocksdb::{MapID, TestMap},
     };
     use console::{

@@ -23,15 +23,8 @@ use console::{
 };
 use snarkvm_synthesizer_process::{Process, Stack};
 use snarkvm_synthesizer_program::{
-    DeserializeBits,
-    DeserializeBitsRaw,
-    DeserializeInstruction,
-    DeserializeVariant,
-    Opcode,
-    Operand,
-    Program,
-    RegistersCircuit as _,
-    RegistersTrait as _,
+    DeserializeBits, DeserializeBitsRaw, DeserializeInstruction, DeserializeVariant, Opcode, Operand, Program,
+    RegistersCircuit as _, RegistersTrait as _,
 };
 
 type CurrentNetwork = MainnetV0;

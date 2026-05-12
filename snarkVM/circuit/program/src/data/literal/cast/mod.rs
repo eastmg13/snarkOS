@@ -25,26 +25,8 @@ use snarkvm_circuit_network::Aleo;
 use snarkvm_circuit_types::{
     IdentifierLiteral,
     prelude::{
-        Address,
-        BitOr,
-        Boolean,
-        Environment,
-        Field,
-        FromBits,
-        FromField,
-        FromGroup,
-        Group,
-        IntegerType,
-        MSB,
-        One,
-        Result,
-        Scalar,
-        ToBits,
-        ToField,
-        ToGroup,
-        Zero,
-        bail,
-        integers::Integer,
+        Address, BitOr, Boolean, Environment, Field, FromBits, FromField, FromGroup, Group, IntegerType, MSB, One,
+        Result, Scalar, ToBits, ToField, ToGroup, Zero, bail, integers::Integer,
     },
 };
 

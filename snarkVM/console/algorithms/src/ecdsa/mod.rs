@@ -24,10 +24,7 @@ use snarkvm_utilities::bytes_from_bits_le;
 use k256::{
     Secp256k1,
     ecdsa::{
-        RecoveryId as ECDSARecoveryId,
-        Signature,
-        SigningKey,
-        VerifyingKey,
+        RecoveryId as ECDSARecoveryId, Signature, SigningKey, VerifyingKey,
         signature::hazmat::{PrehashSigner, PrehashVerifier},
     },
     elliptic_curve::{Curve, array::typenum::Unsigned},

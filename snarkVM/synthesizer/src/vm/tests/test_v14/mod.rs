@@ -75,10 +75,7 @@ use console::{
     program::{DynamicRecord, Entry, Identifier, Value},
 };
 use snarkvm_synthesizer_process::{
-    deployment_cost,
-    execution_cost,
-    execution_cost_for_authorization,
-    execution_cost_for_call,
+    deployment_cost, execution_cost, execution_cost_for_authorization, execution_cost_for_call,
 };
 use snarkvm_synthesizer_program::Program;
 use snarkvm_utilities::TestRng;

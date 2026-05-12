@@ -21,23 +21,8 @@ mod to_bits;
 mod to_fields;
 
 use crate::{
-    Access,
-    Address,
-    Boolean,
-    Entry,
-    Field,
-    Group,
-    Identifier,
-    Literal,
-    Network,
-    Owner,
-    Plaintext,
-    Record,
-    Result,
-    ToField,
-    ToFields,
-    U8,
-    Value,
+    Access, Address, Boolean, Entry, Field, Group, Identifier, Literal, Network, Owner, Plaintext, Record, Result,
+    ToField, ToFields, U8, Value,
 };
 
 use snarkvm_console_algorithms::{Poseidon2, Poseidon8};

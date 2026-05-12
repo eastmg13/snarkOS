@@ -24,9 +24,7 @@ use tokio::{
 use tracing::*;
 
 use crate::{
-    ConnectError,
-    Connection,
-    P2P,
+    ConnectError, Connection, P2P,
     protocols::{ProtocolHandler, ReturnableConnection},
 };
 

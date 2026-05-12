@@ -897,9 +897,13 @@ mod tests {
             33..=44 => (0..10)
                 .map(|_| {
                     PlaintextType::Array(
-                        ArrayType::new(PlaintextType::Literal(LiteralType::Boolean), vec![U32::new(
-                            u32::try_from(rng.random_range(1..=CurrentNetwork::LATEST_MAX_ARRAY_ELEMENTS())).unwrap(),
-                        )])
+                        ArrayType::new(
+                            PlaintextType::Literal(LiteralType::Boolean),
+                            vec![U32::new(
+                                u32::try_from(rng.random_range(1..=CurrentNetwork::LATEST_MAX_ARRAY_ELEMENTS()))
+                                    .unwrap(),
+                            )],
+                        )
                         .unwrap(),
                     )
                 })

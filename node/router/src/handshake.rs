@@ -14,10 +14,7 @@
 // limitations under the License.
 
 use crate::{
-    ConnectionMode,
-    NodeType,
-    PeerPoolHandling,
-    Router,
+    ConnectionMode, NodeType, PeerPoolHandling, Router,
     messages::{ChallengeRequest, ChallengeResponse, DisconnectReason, Message, MessageCodec, MessageTrait},
 };
 use snarkos_node_network::{get_repo_commit_hash, log_repo_sha_comparison};

@@ -20,10 +20,7 @@ use std::{
 };
 
 use crate::{
-    FromBits,
-    FromBytes,
-    ToBits,
-    ToBytes,
+    FromBits, FromBytes, ToBits, ToBytes,
     biginteger::BigInteger,
     bititerator::{BitIteratorBE, BitIteratorLE},
 };
@@ -31,8 +28,7 @@ use crate::{
 use anyhow::Result;
 use num_bigint::BigUint;
 use rand::{
-    Rng,
-    RngExt,
+    Rng, RngExt,
     distr::{Distribution, StandardUniform},
 };
 use zeroize::Zeroize;

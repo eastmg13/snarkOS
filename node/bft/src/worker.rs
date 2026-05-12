@@ -16,10 +16,7 @@
 #[cfg(not(test))]
 use crate::Gateway;
 use crate::{
-    MAX_FETCH_TIMEOUT,
-    MAX_WORKERS,
-    ProposedBatch,
-    Transport,
+    MAX_FETCH_TIMEOUT, MAX_WORKERS, ProposedBatch, Transport,
     events::{Event, TransmissionRequest, TransmissionResponse},
     helpers::{Pending, Ready, Storage, WorkerReceiver, fmt_id, max_redundant_requests},
     spawn_blocking,
@@ -605,9 +602,7 @@ mod tests {
     use snarkvm::{
         console::{network::Network, types::Field},
         ledger::{
-            Block,
-            CheckBlockError,
-            PendingBlock,
+            Block, CheckBlockError, PendingBlock,
             committee::Committee,
             narwhal::{BatchCertificate, Transmission, TransmissionID},
             test_helpers::sample_execution_transaction_with_fee,
@@ -771,10 +766,13 @@ mod tests {
         assert!(worker.pending.contains(transmission_id));
         let peer_ip = SocketAddr::from(([127, 0, 0, 1], 1234));
         // Fake the transmission response.
-        worker.finish_transmission_request(peer_ip, TransmissionResponse {
-            transmission_id,
-            transmission: Transmission::Solution(Data::Buffer(Bytes::from(vec![0; 512]))),
-        });
+        worker.finish_transmission_request(
+            peer_ip,
+            TransmissionResponse {
+                transmission_id,
+                transmission: Transmission::Solution(Data::Buffer(Bytes::from(vec![0; 512]))),
+            },
+        );
         // Check the transmission was removed from the pending set.
         assert!(!worker.pending.contains(transmission_id));
     }

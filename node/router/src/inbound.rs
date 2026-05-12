@@ -14,24 +14,15 @@
 // limitations under the License.
 
 use crate::{
-    Outbound,
-    PeerPoolHandling,
+    Outbound, PeerPoolHandling,
     messages::{
-        BlockRequest,
-        BlockResponse,
-        DataBlocks,
-        Message,
-        PeerResponse,
-        Ping,
-        Pong,
-        UnconfirmedSolution,
+        BlockRequest, BlockResponse, DataBlocks, Message, PeerResponse, Ping, Pong, UnconfirmedSolution,
         UnconfirmedTransaction,
     },
 };
 use snarkos_node_tcp::protocols::Reading;
 use snarkvm::prelude::{
-    ConsensusVersion,
-    Network,
+    ConsensusVersion, Network,
     block::{Block, Header, Transaction},
     puzzle::Solution,
 };

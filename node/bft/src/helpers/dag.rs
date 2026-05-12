@@ -215,8 +215,7 @@ mod tests {
         prelude::{
             MainnetV0,
             narwhal::batch_certificate::test_helpers::{
-                sample_batch_certificate_for_round,
-                sample_batch_certificate_for_round_with_previous_certificate_ids,
+                sample_batch_certificate_for_round, sample_batch_certificate_for_round_with_previous_certificate_ids,
             },
         },
         utilities::TestRng,

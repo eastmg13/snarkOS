@@ -16,9 +16,7 @@
 #![allow(clippy::type_complexity)]
 
 use crate::{
-    CommitteeStorage,
-    CommitteeStore,
-    FinalizeStorage,
+    CommitteeStorage, CommitteeStore, FinalizeStorage,
     helpers::memory::{MemoryMap, NestedMemoryMap},
 };
 #[cfg(feature = "history-staking-rewards")]

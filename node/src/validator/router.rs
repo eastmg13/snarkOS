@@ -16,14 +16,7 @@
 use super::*;
 use snarkos_node_network::{PeerPoolHandling, harden_socket};
 use snarkos_node_router::messages::{
-    BlockRequest,
-    BlockResponse,
-    DataBlocks,
-    DisconnectReason,
-    Message,
-    MessageCodec,
-    Ping,
-    Pong,
+    BlockRequest, BlockResponse, DataBlocks, DisconnectReason, Message, MessageCodec, Ping, Pong,
     UnconfirmedTransaction,
 };
 use snarkos_node_tcp::{ConnectError, Connection, ConnectionSide, Tcp};

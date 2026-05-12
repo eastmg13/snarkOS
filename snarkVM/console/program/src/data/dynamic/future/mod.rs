@@ -198,10 +198,11 @@ mod tests {
         assert_round_trip(vec![Argument::Plaintext(Plaintext::from_str("{ x: 1field, y: 2field }").unwrap())]);
 
         // Nested Future argument.
-        let inner =
-            Future::new(ProgramID::from_str("inner.aleo").unwrap(), Identifier::from_str("bar").unwrap(), vec![
-                Argument::Plaintext(Plaintext::from_str("42u64").unwrap()),
-            ]);
+        let inner = Future::new(
+            ProgramID::from_str("inner.aleo").unwrap(),
+            Identifier::from_str("bar").unwrap(),
+            vec![Argument::Plaintext(Plaintext::from_str("42u64").unwrap())],
+        );
         assert_round_trip(vec![Argument::Future(inner.clone())]);
 
         // DynamicFuture argument.

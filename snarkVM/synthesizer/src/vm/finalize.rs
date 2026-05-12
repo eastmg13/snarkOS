@@ -326,7 +326,7 @@ impl<N: Network, C: ConsensusStorage<N>> VM<N, C> {
 
             /* Perform the ratifications before finalize. */
 
-            match Self::atomic_pre_ratify(store, state, pre_ratifications) {
+            match Self::atomic_pre_ratify(store, state, pre_ratifications, false) {
                 // Store the finalize operations from the post-ratify.
                 Ok(operations) => ratified_finalize_operations.extend(operations),
                 // Note: This will abort the entire atomic batch.
@@ -685,7 +685,7 @@ impl<N: Network, C: ConsensusStorage<N>> VM<N, C> {
 
             /* Perform the ratifications before finalize. */
 
-            match Self::atomic_pre_ratify(store, state, pre_ratifications) {
+            match Self::atomic_pre_ratify(store, state, pre_ratifications, true) {
                 // Store the finalize operations from the post-ratify.
                 Ok(operations) => ratified_finalize_operations.extend(operations),
                 // Note: This will abort the entire atomic batch.
@@ -1159,6 +1159,7 @@ impl<N: Network, C: ConsensusStorage<N>> VM<N, C> {
         store: &FinalizeStore<N, C::FinalizeStorage>,
         state: FinalizeGlobalState,
         pre_ratifications: impl Iterator<Item = &'a Ratify<N>>,
+        persist_committee_store: bool,
     ) -> Result<Vec<FinalizeOperation<N>>> {
         // Construct the program ID.
         let program_id = ProgramID::from_str("credits.aleo")?;
@@ -1300,8 +1301,10 @@ impl<N: Network, C: ConsensusStorage<N>> VM<N, C> {
                     // Construct the next withdraw map.
                     let next_withdraw_map = to_next_withdraw_map(&withdrawal_addresses);
 
-                    // Insert the next committee into storage.
-                    store.committee_store().insert(state.block_height(), *(committee.clone()))?;
+                    // Insert the next committee into storage (skipped during DryRun speculation).
+                    if persist_committee_store {
+                        store.committee_store().insert(state.block_height(), *(committee.clone()))?;
+                    }
                     // Store the finalize operations for updating the committee and bonded mapping.
                     finalize_operations.extend(&[
                         // Replace the committee mapping in storage.
@@ -1459,8 +1462,10 @@ impl<N: Network, C: ConsensusStorage<N>> VM<N, C> {
                     let (next_committee_map, next_bonded_map, next_delegated_map) =
                         to_next_committee_bonded_delegated_map(&next_committee, &next_stakers, &next_delegated);
 
-                    // Insert the next committee into storage.
-                    store.committee_store().insert(state.block_height(), next_committee)?;
+                    // Insert the next committee into storage (skipped during DryRun speculation).
+                    if IS_FINALIZE {
+                        store.committee_store().insert(state.block_height(), next_committee)?;
+                    }
 
                     // Store the finalize operations for updating the committee and bonded mapping.
                     finalize_operations.extend(&[

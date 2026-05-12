@@ -26,15 +26,9 @@ extern crate snarkos_node_metrics as metrics;
 
 use snarkos_account::Account;
 use snarkos_node_bft::{
-    BFT,
-    MAX_BATCH_DELAY,
-    Primary,
+    BFT, MAX_BATCH_DELAY, Primary,
     helpers::{
-        ConsensusReceiver,
-        PrimarySender,
-        Storage as NarwhalStorage,
-        fmt_id,
-        init_consensus_channels,
+        ConsensusReceiver, PrimarySender, Storage as NarwhalStorage, fmt_id, init_consensus_channels,
         init_primary_channels,
     },
     spawn_blocking,

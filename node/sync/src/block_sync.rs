@@ -397,10 +397,13 @@ impl<N: Network> BlockSync<N> {
             .read()
             .iter()
             .map(|(height, request)| {
-                (*height, BlockRequestInfo {
-                    done: request.sync_ips().is_empty(),
-                    elapsed: request.timestamp.elapsed().as_secs(),
-                })
+                (
+                    *height,
+                    BlockRequestInfo {
+                        done: request.sync_ips().is_empty(),
+                        elapsed: request.timestamp.elapsed().as_secs(),
+                    },
+                )
             })
             .collect()
     }
@@ -1231,11 +1234,10 @@ impl<N: Network> BlockSync<N> {
         // Ensure the sync IPs are not empty.
         ensure!(!sync_ips.is_empty(), "Cannot insert a block request with no sync IPs");
         // Insert the block request.
-        self.requests.write().insert(height, OutstandingRequest {
-            request: (hash, previous_hash, sync_ips),
-            timestamp: Instant::now(),
-            response: None,
-        });
+        self.requests.write().insert(
+            height,
+            OutstandingRequest { request: (hash, previous_hash, sync_ips), timestamp: Instant::now(), response: None },
+        );
         Ok(())
     }
 
@@ -1718,8 +1720,7 @@ fn construct_request<N: Network>(
 mod tests {
     use super::*;
     use crate::locators::{
-        CHECKPOINT_INTERVAL,
-        NUM_RECENT_BLOCKS,
+        CHECKPOINT_INTERVAL, NUM_RECENT_BLOCKS,
         test_helpers::{sample_block_locators, sample_block_locators_with_fork},
     };
 
@@ -2274,11 +2275,9 @@ mod tests {
         let timestamp = Instant::now() - BLOCK_REQUEST_TIMEOUT - Duration::from_secs(1);
 
         // Add a timed-out request
-        sync.requests.write().insert(1, OutstandingRequest {
-            request: (block_hash, None, [peer_ip].into()),
-            timestamp,
-            response: None,
-        });
+        sync.requests
+            .write()
+            .insert(1, OutstandingRequest { request: (block_hash, None, [peer_ip].into()), timestamp, response: None });
 
         assert_eq!(sync.requests.read().len(), 1);
         assert_eq!(sync.locators.read().len(), 1);
@@ -2314,18 +2313,20 @@ mod tests {
         let timestamp = Instant::now() - BLOCK_REQUEST_TIMEOUT - Duration::from_secs(1);
 
         // Add a timed-out request
-        sync.requests.write().insert(1, OutstandingRequest {
-            request: (block_hash1, None, [peer_ip1].into()),
-            timestamp,
-            response: None,
-        });
+        sync.requests.write().insert(
+            1,
+            OutstandingRequest { request: (block_hash1, None, [peer_ip1].into()), timestamp, response: None },
+        );
 
         // Add a timed-out request
-        sync.requests.write().insert(2, OutstandingRequest {
-            request: (block_hash2, None, [peer_ip2].into()),
-            timestamp: Instant::now(),
-            response: None,
-        });
+        sync.requests.write().insert(
+            2,
+            OutstandingRequest {
+                request: (block_hash2, None, [peer_ip2].into()),
+                timestamp: Instant::now(),
+                response: None,
+            },
+        );
 
         assert_eq!(sync.requests.read().len(), 2);
 

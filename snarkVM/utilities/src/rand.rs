@@ -15,11 +15,7 @@
 
 use core::convert::Infallible;
 use rand::{
-    Rng,
-    RngExt,
-    SeedableRng,
-    TryCryptoRng,
-    TryRng,
+    Rng, RngExt, SeedableRng, TryCryptoRng, TryRng,
     distr::{Distribution, StandardUniform},
 };
 use rand_xorshift::XorShiftRng;

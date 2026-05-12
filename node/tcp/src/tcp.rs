@@ -15,8 +15,7 @@
 
 use std::{
     collections::HashSet,
-    fmt,
-    io,
+    fmt, io,
     net::{IpAddr, SocketAddr},
     ops::Deref,
     sync::{
@@ -42,10 +41,7 @@ use tokio::{
 use tracing::*;
 
 use crate::{
-    BannedPeers,
-    Config,
-    KnownPeers,
-    Stats,
+    BannedPeers, Config, KnownPeers, Stats,
     connections::{Connection, ConnectionSide, Connections},
     protocols::{Protocol, Protocols},
 };

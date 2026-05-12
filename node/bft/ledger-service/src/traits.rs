@@ -15,10 +15,7 @@
 
 use snarkvm::{
     ledger::{
-        Block,
-        CheckBlockError,
-        PendingBlock,
-        Transaction,
+        Block, CheckBlockError, PendingBlock, Transaction,
         committee::Committee,
         narwhal::{BatchCertificate, Data, Subdag, Transmission, TransmissionID},
         puzzle::{Solution, SolutionID},

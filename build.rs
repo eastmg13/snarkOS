@@ -19,8 +19,7 @@ use std::{
     fs::{self, File},
     io::Read,
     path::Path,
-    process,
-    str,
+    process, str,
 };
 use toml::Value;
 use walkdir::WalkDir;

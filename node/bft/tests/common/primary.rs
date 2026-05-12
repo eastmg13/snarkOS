@@ -14,17 +14,13 @@
 // limitations under the License.
 
 use crate::common::{
-    CurrentNetwork,
-    TranslucentLedgerService,
+    CurrentNetwork, TranslucentLedgerService,
     utils::{fire_unconfirmed_solutions, fire_unconfirmed_transactions},
 };
 
 use snarkos_account::Account;
 use snarkos_node_bft::{
-    BFT,
-    MAX_BATCH_DELAY,
-    MEMORY_POOL_PORT,
-    Primary,
+    BFT, MAX_BATCH_DELAY, MEMORY_POOL_PORT, Primary,
     helpers::{PrimarySender, Storage, init_primary_channels},
 };
 use snarkos_node_bft_storage_service::BFTMemoryService;

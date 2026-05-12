@@ -16,10 +16,7 @@
 #[cfg(feature = "telemetry")]
 use crate::helpers::Telemetry;
 use crate::{
-    CONTEXT,
-    MAX_BATCH_DELAY,
-    MEMORY_POOL_PORT,
-    Worker,
+    CONTEXT, MAX_BATCH_DELAY, MEMORY_POOL_PORT, Worker,
     events::{DisconnectReason, EventCodec, PrimaryPing},
     helpers::{Cache, PrimarySender, Storage, SyncSender, WorkerSender, assign_to_worker},
     spawn_blocking,
@@ -27,40 +24,17 @@ use crate::{
 use smol_str::SmolStr;
 use snarkos_account::Account;
 use snarkos_node_bft_events::{
-    BlockRequest,
-    BlockResponse,
-    CertificateRequest,
-    CertificateResponse,
-    ChallengeRequest,
-    ChallengeResponse,
-    DataBlocks,
-    Event,
-    EventTrait,
-    TransmissionRequest,
-    TransmissionResponse,
-    ValidatorsRequest,
-    ValidatorsResponse,
+    BlockRequest, BlockResponse, CertificateRequest, CertificateResponse, ChallengeRequest, ChallengeResponse,
+    DataBlocks, Event, EventTrait, TransmissionRequest, TransmissionResponse, ValidatorsRequest, ValidatorsResponse,
 };
 use snarkos_node_bft_ledger_service::LedgerService;
 use snarkos_node_network::{
-    ConnectionMode,
-    NodeType,
-    Peer,
-    PeerPoolHandling,
-    Resolver,
-    bootstrap_peers,
-    get_repo_commit_hash,
-    log_repo_sha_comparison,
-    shorten_snarkos_sha,
+    ConnectionMode, NodeType, Peer, PeerPoolHandling, Resolver, bootstrap_peers, get_repo_commit_hash,
+    log_repo_sha_comparison, shorten_snarkos_sha,
 };
 use snarkos_node_sync::{MAX_BLOCKS_BEHIND, communication_service::CommunicationService};
 use snarkos_node_tcp::{
-    Config,
-    ConnectError,
-    Connection,
-    ConnectionSide,
-    P2P,
-    Tcp,
+    Config, ConnectError, Connection, ConnectionSide, P2P, Tcp,
     protocols::{Disconnect, Handshake, OnConnect, Reading, Writing},
 };
 use snarkos_utilities::NodeDataDir;
@@ -1776,10 +1750,7 @@ impl<N: Network> Gateway<N> {
 #[cfg(test)]
 mod prop_tests {
     use crate::{
-        Gateway,
-        MAX_WORKERS,
-        MEMORY_POOL_PORT,
-        Worker,
+        Gateway, MAX_WORKERS, MEMORY_POOL_PORT, Worker,
         helpers::{Storage, init_primary_channels, init_worker_channels},
     };
 

@@ -18,15 +18,11 @@ use common::*;
 
 use snarkos_node_network::PeerPoolHandling;
 use snarkos_node_router::{
-    Heartbeat,
-    Outbound,
-    Router,
-    Routing,
+    Heartbeat, Outbound, Router, Routing,
     messages::{Message, MessageCodec},
 };
 use snarkos_node_tcp::{
-    ConnectionSide,
-    P2P,
+    ConnectionSide, P2P,
     protocols::{Handshake, OnConnect, Writing},
 };
 use snarkvm::prelude::{MainnetV0 as Network, TestRng};

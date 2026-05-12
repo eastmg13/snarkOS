@@ -16,10 +16,7 @@
 use crate::{BeginLedgerUpdateError, LedgerService, LedgerUpdateService, fmt_id};
 use snarkvm::{
     ledger::{
-        Block,
-        CheckBlockError,
-        PendingBlock,
-        Transaction,
+        Block, CheckBlockError, PendingBlock, Transaction,
         committee::Committee,
         narwhal::{BatchCertificate, Data, Transmission, TransmissionID},
         puzzle::{Solution, SolutionID},

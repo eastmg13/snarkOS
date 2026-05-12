@@ -58,23 +58,8 @@ impl Decrypt {
 mod tests {
     use super::*;
     use snarkvm::prelude::{
-        Address,
-        Entry,
-        Field,
-        Identifier,
-        Literal,
-        MainnetV0,
-        Network,
-        One,
-        Owner,
-        Plaintext,
-        PrivateKey,
-        Scalar,
-        TestRng,
-        U8,
-        Uniform,
-        ViewKey,
-        Zero,
+        Address, Entry, Field, Identifier, Literal, MainnetV0, Network, One, Owner, Plaintext, PrivateKey, Scalar,
+        TestRng, U8, Uniform, ViewKey, Zero,
     };
 
     use indexmap::IndexMap;

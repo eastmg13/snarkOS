@@ -254,19 +254,13 @@ mod tests {
 #[cfg(test)]
 pub mod prop_tests {
     use crate::{
-        Disconnect,
-        DisconnectReason,
-        Event,
-        batch_certified::prop_tests::any_batch_certified,
-        batch_propose::prop_tests::any_batch_propose,
-        batch_signature::prop_tests::any_batch_signature,
+        Disconnect, DisconnectReason, Event, batch_certified::prop_tests::any_batch_certified,
+        batch_propose::prop_tests::any_batch_propose, batch_signature::prop_tests::any_batch_signature,
         certificate_request::prop_tests::any_certificate_request,
         certificate_response::prop_tests::any_certificate_response,
-        challenge_request::prop_tests::any_challenge_request,
-        challenge_response::prop_tests::any_challenge_response,
+        challenge_request::prop_tests::any_challenge_request, challenge_response::prop_tests::any_challenge_response,
         transmission_request::prop_tests::any_transmission_request,
-        transmission_response::prop_tests::any_transmission_response,
-        worker_ping::prop_tests::any_worker_ping,
+        transmission_response::prop_tests::any_transmission_response, worker_ping::prop_tests::any_worker_ping,
     };
     use snarkvm::{
         console::{network::Network, types::Field},

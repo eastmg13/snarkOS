@@ -32,9 +32,7 @@ use tracing::*;
 #[cfg(doc)]
 use crate::{Config, Tcp, protocols::Handshake};
 use crate::{
-    Connection,
-    ConnectionSide,
-    P2P,
+    Connection, ConnectionSide, P2P,
     protocols::{Protocol, ProtocolHandler, ReturnableConnection},
 };
 

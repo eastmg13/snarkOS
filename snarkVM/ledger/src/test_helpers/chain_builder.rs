@@ -14,11 +14,7 @@
 // limitations under the License.
 
 use crate::{
-    Block,
-    Ledger,
-    Transaction,
-    Transmission,
-    TransmissionID,
+    Block, Ledger, Transaction, Transmission, TransmissionID,
     narwhal::{BatchCertificate, BatchHeader, Subdag},
     puzzle::Solution,
     store::{ConsensusStore, helpers::memory::ConsensusMemory},

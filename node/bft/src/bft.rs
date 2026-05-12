@@ -919,9 +919,7 @@ impl<N: Network> BFT<N> {
 #[cfg(test)]
 mod tests {
     use crate::{
-        BFT,
-        MAX_LEADER_CERTIFICATE_DELAY,
-        PrimaryCallback,
+        BFT, MAX_LEADER_CERTIFICATE_DELAY, PrimaryCallback,
         helpers::{Storage, dag::test_helpers::mock_dag_with_modified_last_committed_round},
         sync::SyncCallback,
     };
@@ -943,8 +941,7 @@ mod tests {
             narwhal::{
                 BatchCertificate,
                 batch_certificate::test_helpers::{
-                    sample_batch_certificate,
-                    sample_batch_certificate_for_round,
+                    sample_batch_certificate, sample_batch_certificate_for_round,
                     sample_batch_certificate_for_round_with_committee,
                 },
             },

@@ -17,14 +17,7 @@ use super::*;
 
 use snarkos_node_network::harden_socket;
 use snarkos_node_router::messages::{
-    BlockRequest,
-    DisconnectReason,
-    Message,
-    MessageCodec,
-    Ping,
-    Pong,
-    PuzzleRequest,
-    UnconfirmedTransaction,
+    BlockRequest, DisconnectReason, Message, MessageCodec, Ping, Pong, PuzzleRequest, UnconfirmedTransaction,
 };
 use snarkos_node_tcp::{ConnectError, Connection, ConnectionSide, Tcp};
 use snarkvm::{

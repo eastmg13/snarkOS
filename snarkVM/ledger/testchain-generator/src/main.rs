@@ -14,17 +14,10 @@
 // limitations under the License.
 
 use snarkvm_console::prelude::{
-    CanaryV0,
-    MainnetV0,
-    Network,
-    TEST_CONSENSUS_VERSION_HEIGHTS,
-    TestRng,
-    TestnetV0,
-    ToBytes,
+    CanaryV0, MainnetV0, Network, TEST_CONSENSUS_VERSION_HEIGHTS, TestRng, TestnetV0, ToBytes,
 };
 use snarkvm_ledger::{
-    Ledger,
-    Transaction,
+    Ledger, Transaction,
     store::helpers::rocksdb::ConsensusDB,
     test_helpers::{TestChainBuilder, chain_builder::GenerateBlocksOptions},
 };

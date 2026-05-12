@@ -26,8 +26,7 @@ use core::{
     ops::{Add, AddAssign, Mul, MulAssign, Neg, Sub, SubAssign},
 };
 use rand::{
-    Rng,
-    RngExt,
+    Rng, RngExt,
     distr::{Distribution, StandardUniform},
 };
 use std::io::{Read, Result as IoResult, Write};

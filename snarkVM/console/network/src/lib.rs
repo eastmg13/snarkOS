@@ -43,18 +43,9 @@ pub mod prelude {
     #[cfg(feature = "wasm")]
     pub use crate::get_or_init_consensus_version_heights;
     pub use crate::{
-        CANARY_V0_CONSENSUS_VERSION_HEIGHTS,
-        CanaryV0,
-        ConsensusVersion,
-        MAINNET_V0_CONSENSUS_VERSION_HEIGHTS,
-        MainnetV0,
-        Network,
-        TEST_CONSENSUS_VERSION_HEIGHTS,
-        TESTNET_V0_CONSENSUS_VERSION_HEIGHTS,
-        TestnetV0,
-        consensus_config_value,
-        consensus_config_value_by_version,
-        environment::prelude::*,
+        CANARY_V0_CONSENSUS_VERSION_HEIGHTS, CanaryV0, ConsensusVersion, MAINNET_V0_CONSENSUS_VERSION_HEIGHTS,
+        MainnetV0, Network, TEST_CONSENSUS_VERSION_HEIGHTS, TESTNET_V0_CONSENSUS_VERSION_HEIGHTS, TestnetV0,
+        consensus_config_value, consensus_config_value_by_version, environment::prelude::*,
     };
 }
 

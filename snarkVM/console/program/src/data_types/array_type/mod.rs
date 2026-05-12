@@ -208,9 +208,10 @@ mod tests {
         assert_eq!(
             array,
             ArrayType::<CurrentNetwork>::new(
-                PlaintextType::Array(ArrayType::<CurrentNetwork>::new(PlaintextType::from_str("field")?, vec![
-                    U32::new(2)
-                ])?),
+                PlaintextType::Array(ArrayType::<CurrentNetwork>::new(
+                    PlaintextType::from_str("field")?,
+                    vec![U32::new(2)]
+                )?),
                 vec![U32::new(3)]
             )?
         );
@@ -221,9 +222,10 @@ mod tests {
         assert_eq!(array.to_string(), "[[field; 2u32]; 3u32]");
         assert_eq!(
             array.next_element_type(),
-            &PlaintextType::Array(ArrayType::<CurrentNetwork>::new(PlaintextType::Literal(LiteralType::Field), vec![
-                U32::new(2)
-            ])?)
+            &PlaintextType::Array(ArrayType::<CurrentNetwork>::new(
+                PlaintextType::Literal(LiteralType::Field),
+                vec![U32::new(2)]
+            )?)
         );
         assert_eq!(array.length(), &U32::new(3));
         assert!(!array.is_empty());

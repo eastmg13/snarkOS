@@ -266,11 +266,10 @@ mod tests {
         // Check the transmission IDs.
         assert_eq!(ready.transmission_ids(), IndexSet::new());
         // Check the transmissions.
-        assert_eq!(transmissions, vec![
-            (solution_id_1, solution_1),
-            (solution_id_2, solution_2),
-            (solution_id_3, solution_3)
-        ]);
+        assert_eq!(
+            transmissions,
+            vec![(solution_id_1, solution_1), (solution_id_2, solution_2), (solution_id_3, solution_3)]
+        );
     }
 
     #[test]

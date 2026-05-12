@@ -25,24 +25,9 @@ use console::{
 };
 use snarkvm_synthesizer_process::{Process, Stack};
 use snarkvm_synthesizer_program::{
-    CommitBHP256,
-    CommitBHP256Raw,
-    CommitBHP512,
-    CommitBHP512Raw,
-    CommitBHP768,
-    CommitBHP768Raw,
-    CommitBHP1024,
-    CommitBHP1024Raw,
-    CommitInstruction,
-    CommitPED64,
-    CommitPED64Raw,
-    CommitPED128,
-    CommitPED128Raw,
-    Opcode,
-    Operand,
-    Program,
-    RegistersCircuit as _,
-    RegistersTrait as _,
+    CommitBHP256, CommitBHP256Raw, CommitBHP512, CommitBHP512Raw, CommitBHP768, CommitBHP768Raw, CommitBHP1024,
+    CommitBHP1024Raw, CommitInstruction, CommitPED64, CommitPED64Raw, CommitPED128, CommitPED128Raw, Opcode, Operand,
+    Program, RegistersCircuit as _, RegistersTrait as _,
 };
 
 type CurrentNetwork = MainnetV0;

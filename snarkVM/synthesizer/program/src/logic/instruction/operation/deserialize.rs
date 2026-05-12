@@ -17,20 +17,8 @@ use crate::{Opcode, Operand, RegistersCircuit, RegistersTrait, StackTrait};
 use console::{
     network::prelude::*,
     program::{
-        ArrayType,
-        Identifier,
-        Literal,
-        LiteralType,
-        Locator,
-        Plaintext,
-        PlaintextType,
-        Register,
-        RegisterType,
-        StructType,
-        U8,
-        U16,
-        U32,
-        Value,
+        ArrayType, Identifier, Literal, LiteralType, Locator, Plaintext, PlaintextType, Register, RegisterType,
+        StructType, U8, U16, U32, Value,
     },
 };
 

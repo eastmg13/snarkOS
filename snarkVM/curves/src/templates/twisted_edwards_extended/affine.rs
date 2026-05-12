@@ -28,8 +28,7 @@ use std::{
 };
 
 use rand::{
-    Rng,
-    RngExt,
+    Rng, RngExt,
     distr::{Distribution, StandardUniform},
 };
 use serde::{Deserialize, Serialize};

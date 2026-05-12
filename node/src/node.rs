@@ -14,10 +14,7 @@
 // limitations under the License.
 
 use crate::{
-    BootstrapClient,
-    Client,
-    Prover,
-    Validator,
+    BootstrapClient, Client, Prover, Validator,
     network::{NodeType, Peer, PeerPoolHandling},
     router::Outbound,
     traits::NodeInterface,
@@ -27,12 +24,7 @@ use snarkos_account::Account;
 use snarkos_utilities::{NodeDataDir, SignalHandler};
 
 use snarkvm::prelude::{
-    Address,
-    Header,
-    Ledger,
-    Network,
-    PrivateKey,
-    ViewKey,
+    Address, Header, Ledger, Network, PrivateKey, ViewKey,
     block::Block,
     store::helpers::{memory::ConsensusMemory, rocksdb::ConsensusDB},
 };

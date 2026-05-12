@@ -19,30 +19,16 @@ use snarkos_utilities::Stoppable;
 
 use snarkvm::{
     ledger::{
-        Block,
-        CheckBlockError,
-        Ledger,
-        PendingBlock,
-        Transaction,
+        Block, CheckBlockError, Ledger, PendingBlock, Transaction,
         committee::Committee,
         narwhal::{BatchCertificate, Data, Subdag, Transmission, TransmissionID},
         puzzle::{Solution, SolutionID},
         store::ConsensusStorage,
     },
     prelude::{
-        Address,
-        ConsensusVersion,
-        Field,
-        FromBytes,
-        Network,
-        Result,
-        bail,
-        cfg_into_iter,
-        consensus_config_value_by_version,
-        deploy_compute_cost_in_microcredits,
-        deployment_cost,
-        execute_compute_cost_in_microcredits,
-        execution_cost,
+        Address, ConsensusVersion, Field, FromBytes, Network, Result, bail, cfg_into_iter,
+        consensus_config_value_by_version, deploy_compute_cost_in_microcredits, deployment_cost,
+        execute_compute_cost_in_microcredits, execution_cost,
     },
 };
 

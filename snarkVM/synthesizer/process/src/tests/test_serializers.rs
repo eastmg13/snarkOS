@@ -355,15 +355,17 @@ finalize dummy:
             ArrayType::new(PlaintextType::Struct(Identifier::from_str("B").unwrap()), vec![U32::new(2)]).unwrap(),
         )),
         RegisterType::Plaintext(PlaintextType::Array(
-            ArrayType::new(PlaintextType::ExternalStruct(Locator::from_str("test0.aleo/A").unwrap()), vec![U32::new(
-                3,
-            )])
+            ArrayType::new(
+                PlaintextType::ExternalStruct(Locator::from_str("test0.aleo/A").unwrap()),
+                vec![U32::new(3)],
+            )
             .unwrap(),
         )),
         RegisterType::Plaintext(PlaintextType::Array(
-            ArrayType::new(PlaintextType::ExternalStruct(Locator::from_str("test0.aleo/B").unwrap()), vec![U32::new(
-                2,
-            )])
+            ArrayType::new(
+                PlaintextType::ExternalStruct(Locator::from_str("test0.aleo/B").unwrap()),
+                vec![U32::new(2)],
+            )
             .unwrap(),
         )),
         RegisterType::Record(Identifier::from_str("credits").unwrap()),

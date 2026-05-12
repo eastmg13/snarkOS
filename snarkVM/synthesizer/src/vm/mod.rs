@@ -30,68 +30,30 @@ use console::{
     account::{Address, PrivateKey},
     network::prelude::*,
     program::{
-        Argument,
-        FINALIZE_ID_DEPTH,
-        Identifier,
-        Literal,
-        Locator,
-        Plaintext,
-        ProgramID,
-        ProgramOwner,
-        Record,
-        Response,
-        Value,
+        Argument, FINALIZE_ID_DEPTH, Identifier, Literal, Locator, Plaintext, ProgramID, ProgramOwner, Record,
+        Response, Value,
     },
     types::{Field, Group, U16, U64},
 };
 use snarkvm_algorithms::snark::varuna::VarunaVersion;
 use snarkvm_ledger_block::{
-    Block,
-    ConfirmedTransaction,
-    Deployment,
-    DeploymentVersion,
-    Execution,
-    Fee,
-    Header,
-    Output,
-    Ratifications,
-    Ratify,
-    Rejected,
-    Solutions,
-    Transaction,
-    Transactions,
+    Block, ConfirmedTransaction, Deployment, DeploymentVersion, Execution, Fee, Header, Output, Ratifications, Ratify,
+    Rejected, Solutions, Transaction, Transactions,
 };
 use snarkvm_ledger_committee::Committee;
 use snarkvm_ledger_narwhal_data::Data;
 use snarkvm_ledger_puzzle::Puzzle;
 use snarkvm_ledger_query::{Query, QueryTrait};
 use snarkvm_ledger_store::{
-    BlockStore,
-    ConsensusStorage,
-    ConsensusStore,
-    FinalizeMode,
-    FinalizeStore,
-    TransactionStore,
-    TransitionStore,
+    BlockStore, ConsensusStorage, ConsensusStore, FinalizeMode, FinalizeStore, TransactionStore, TransitionStore,
     atomic_finalize,
 };
 use snarkvm_synthesizer_process::{
-    Authorization,
-    InclusionVersion,
-    Process,
-    Trace,
-    deploy_compute_cost_in_microcredits,
-    deployment_cost,
-    execute_compute_cost_in_microcredits,
-    execution_cost,
+    Authorization, InclusionVersion, Process, Trace, deploy_compute_cost_in_microcredits, deployment_cost,
+    execute_compute_cost_in_microcredits, execution_cost,
 };
 use snarkvm_synthesizer_program::{
-    FinalizeCore,
-    FinalizeGlobalState,
-    FinalizeOperation,
-    FinalizeStoreTrait,
-    Program,
-    StackTrait as _,
+    FinalizeCore, FinalizeGlobalState, FinalizeOperation, FinalizeStoreTrait, Program, StackTrait as _,
 };
 use snarkvm_utilities::try_vm_runtime;
 

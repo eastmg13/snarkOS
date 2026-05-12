@@ -23,55 +23,14 @@ use console::{
 };
 use snarkvm_synthesizer_process::{Process, Stack};
 use snarkvm_synthesizer_program::{
-    HashBHP256,
-    HashBHP256Raw,
-    HashBHP512,
-    HashBHP512Raw,
-    HashBHP768,
-    HashBHP768Raw,
-    HashBHP1024,
-    HashBHP1024Raw,
-    HashInstruction,
-    HashKeccak256,
-    HashKeccak256Native,
-    HashKeccak256NativeRaw,
-    HashKeccak256Raw,
-    HashKeccak384,
-    HashKeccak384Native,
-    HashKeccak384NativeRaw,
-    HashKeccak384Raw,
-    HashKeccak512,
-    HashKeccak512Native,
-    HashKeccak512NativeRaw,
-    HashKeccak512Raw,
-    HashPED64,
-    HashPED64Raw,
-    HashPED128,
-    HashPED128Raw,
-    HashPSD2,
-    HashPSD2Raw,
-    HashPSD4,
-    HashPSD4Raw,
-    HashPSD8,
-    HashPSD8Raw,
-    HashSha3_256,
-    HashSha3_256Native,
-    HashSha3_256NativeRaw,
-    HashSha3_256Raw,
-    HashSha3_384,
-    HashSha3_384Native,
-    HashSha3_384NativeRaw,
-    HashSha3_384Raw,
-    HashSha3_512,
-    HashSha3_512Native,
-    HashSha3_512NativeRaw,
-    HashSha3_512Raw,
-    HashVariant,
-    Opcode,
-    Operand,
-    Program,
-    RegistersCircuit as _,
-    RegistersTrait as _,
+    HashBHP256, HashBHP256Raw, HashBHP512, HashBHP512Raw, HashBHP768, HashBHP768Raw, HashBHP1024, HashBHP1024Raw,
+    HashInstruction, HashKeccak256, HashKeccak256Native, HashKeccak256NativeRaw, HashKeccak256Raw, HashKeccak384,
+    HashKeccak384Native, HashKeccak384NativeRaw, HashKeccak384Raw, HashKeccak512, HashKeccak512Native,
+    HashKeccak512NativeRaw, HashKeccak512Raw, HashPED64, HashPED64Raw, HashPED128, HashPED128Raw, HashPSD2,
+    HashPSD2Raw, HashPSD4, HashPSD4Raw, HashPSD8, HashPSD8Raw, HashSha3_256, HashSha3_256Native, HashSha3_256NativeRaw,
+    HashSha3_256Raw, HashSha3_384, HashSha3_384Native, HashSha3_384NativeRaw, HashSha3_384Raw, HashSha3_512,
+    HashSha3_512Native, HashSha3_512NativeRaw, HashSha3_512Raw, HashVariant, Opcode, Operand, Program,
+    RegistersCircuit as _, RegistersTrait as _,
 };
 
 type CurrentNetwork = MainnetV0;
@@ -99,9 +58,10 @@ fn sample_valid_input_types<N: Network, R: CryptoRng + Rng>(
             .map(|_| {
                 let length = rng.random_range(1..=(CurrentNetwork::LATEST_MAX_ARRAY_ELEMENTS() / 8)) * 8;
                 PlaintextType::Array(
-                    ArrayType::new(PlaintextType::Literal(LiteralType::Boolean), vec![U32::new(
-                        u32::try_from(length).unwrap(),
-                    )])
+                    ArrayType::new(
+                        PlaintextType::Literal(LiteralType::Boolean),
+                        vec![U32::new(u32::try_from(length).unwrap())],
+                    )
                     .unwrap(),
                 )
             })

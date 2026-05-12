@@ -25,8 +25,7 @@ use snarkvm_console::{
     types::{Address, Field, Group, U16},
 };
 use snarkvm_synthesizer::{
-    Process,
-    Stack,
+    Process, Stack,
     process::{TranslationAssignment, compute_console_dynamic_or_external_record_id},
     program::StackTrait,
 };

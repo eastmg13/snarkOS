@@ -14,12 +14,7 @@
 // limitations under the License.
 
 use crate::events::{
-    BatchPropose,
-    BatchSignature,
-    CertificateRequest,
-    CertificateResponse,
-    TransmissionRequest,
-    TransmissionResponse,
+    BatchPropose, BatchSignature, CertificateRequest, CertificateResponse, TransmissionRequest, TransmissionResponse,
 };
 use snarkos_node_sync::{InsertBlockResponseError, locators::BlockLocators};
 use snarkvm::{

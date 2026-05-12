@@ -35,11 +35,7 @@ use std::{
 
 use futures_util::{TryStreamExt, sink::SinkExt};
 use pea2pea::{
-    Config,
-    Connection,
-    ConnectionSide,
-    Node,
-    Pea2Pea,
+    Config, Connection, ConnectionSide, Node, Pea2Pea,
     protocols::{Handshake, OnDisconnect, Reading, Writing},
 };
 use rand::RngExt;

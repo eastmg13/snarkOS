@@ -21,9 +21,7 @@ extern crate snarkos_node_metrics as metrics;
 
 use snarkos_account::Account;
 use snarkos_node_bft::{
-    BFT,
-    MEMORY_POOL_PORT,
-    Primary,
+    BFT, MEMORY_POOL_PORT, Primary,
     helpers::{ConsensusReceiver, PrimarySender, Storage, init_consensus_channels, init_primary_channels},
 };
 use snarkos_node_bft_ledger_service::TranslucentLedgerService;
@@ -36,8 +34,7 @@ use aleo_std::StorageMode;
 use snarkvm::{
     console::{account::PrivateKey, algorithms::BHP256, types::Address},
     ledger::{
-        Block,
-        Ledger,
+        Block, Ledger,
         block::Transaction,
         committee::{Committee, MIN_VALIDATOR_STAKE},
         narwhal::{BatchHeader, Data},

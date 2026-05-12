@@ -14,9 +14,7 @@
 // limitations under the License.
 
 use crate::{
-    Gateway,
-    MAX_FETCH_TIMEOUT,
-    Transport,
+    Gateway, MAX_FETCH_TIMEOUT, Transport,
     events::{CertificateRequest, CertificateResponse, Event},
     helpers::{Pending, Storage, SyncReceiver, fmt_id, max_redundant_requests},
     ledger_service::{BeginLedgerUpdateError, LedgerService},

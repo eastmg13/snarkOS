@@ -157,10 +157,11 @@ fn check_assert<const VARIANT: u8>(
         <CurrentAleo as circuit::Environment>::reset();
 
         // Attempt to finalize the valid operand case.
-        let mut registers = sample_finalize_registers(&stack, &function_name, &[
-            Plaintext::from(literal_a),
-            Plaintext::from(literal_a),
-        ])
+        let mut registers = sample_finalize_registers(
+            &stack,
+            &function_name,
+            &[Plaintext::from(literal_a), Plaintext::from(literal_a)],
+        )
         .unwrap();
         let result_c = operation.finalize(&stack, &mut registers);
 
@@ -232,10 +233,11 @@ fn check_assert<const VARIANT: u8>(
         <CurrentAleo as circuit::Environment>::reset();
 
         // Attempt to finalize the valid operand case.
-        let mut registers = sample_finalize_registers(&stack, &function_name, &[
-            Plaintext::from(literal_a),
-            Plaintext::from(literal_b),
-        ])
+        let mut registers = sample_finalize_registers(
+            &stack,
+            &function_name,
+            &[Plaintext::from(literal_a), Plaintext::from(literal_b)],
+        )
         .unwrap();
         let result_c = operation.finalize(&stack, &mut registers);
 

@@ -16,28 +16,13 @@
 use crate::common::sample_genesis_block;
 use snarkos_node_network::{NodeType, Peer, PeerPoolHandling, Resolver};
 use snarkos_node_router::{
-    Heartbeat,
-    Inbound,
-    Outbound,
-    Router,
-    Routing,
+    Heartbeat, Inbound, Outbound, Router, Routing,
     messages::{
-        BlockRequest,
-        DisconnectReason,
-        Message,
-        MessageCodec,
-        Ping,
-        Pong,
-        UnconfirmedSolution,
-        UnconfirmedTransaction,
+        BlockRequest, DisconnectReason, Message, MessageCodec, Ping, Pong, UnconfirmedSolution, UnconfirmedTransaction,
     },
 };
 use snarkos_node_tcp::{
-    ConnectError,
-    Connection,
-    ConnectionSide,
-    P2P,
-    Tcp,
+    ConnectError, Connection, ConnectionSide, P2P, Tcp,
     protocols::{Disconnect, Handshake, OnConnect, Reading, Writing},
 };
 use snarkvm::{

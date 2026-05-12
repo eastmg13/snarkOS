@@ -60,12 +60,16 @@ impl NodeType {
 
 impl core::fmt::Display for NodeType {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        write!(f, "{}", match self {
-            Self::Client => "Client",
-            Self::Prover => "Prover",
-            Self::Validator => "Validator",
-            Self::BootstrapClient => "Bootstrap Client",
-        })
+        write!(
+            f,
+            "{}",
+            match self {
+                Self::Client => "Client",
+                Self::Prover => "Prover",
+                Self::Validator => "Validator",
+                Self::BootstrapClient => "Bootstrap Client",
+            }
+        )
     }
 }
 

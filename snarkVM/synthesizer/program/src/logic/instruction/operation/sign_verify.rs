@@ -18,14 +18,7 @@ use circuit::prelude::ToFields as CircuitToFields;
 use console::{
     network::prelude::*,
     program::{
-        Address,
-        Literal,
-        LiteralType,
-        PlaintextType,
-        Register,
-        RegisterType,
-        Signature,
-        ToFields as ConsoleToFields,
+        Address, Literal, LiteralType, PlaintextType, Register, RegisterType, Signature, ToFields as ConsoleToFields,
         Value,
     },
     types::Boolean,

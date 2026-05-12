@@ -17,8 +17,7 @@ use crate::common::{CurrentNetwork, TranslucentLedgerService, primary};
 
 use snarkos_account::Account;
 use snarkos_node_bft::{
-    Gateway,
-    Worker,
+    Gateway, Worker,
     helpers::{PrimarySender, Storage},
     storage_service::BFTMemoryService,
 };
@@ -32,10 +31,7 @@ use snarkvm::{
         store::helpers::memory::ConsensusMemory,
     },
     prelude::{
-        Field,
-        Network,
-        TestRng,
-        Uniform,
+        Field, Network, TestRng, Uniform,
         block::Transaction,
         committee::MIN_VALIDATOR_STAKE,
         puzzle::{Solution, SolutionID},

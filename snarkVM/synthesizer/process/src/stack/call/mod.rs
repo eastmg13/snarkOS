@@ -23,13 +23,7 @@ use console::{
 };
 use snarkvm_synthesizer_error::*;
 use snarkvm_synthesizer_program::{
-    Call,
-    CallDynamic,
-    CallOperator,
-    Operand,
-    RegistersCircuit as _,
-    RegistersSigner as _,
-    RegistersTrait as _,
+    Call, CallDynamic, CallOperator, Operand, RegistersCircuit as _, RegistersSigner as _, RegistersTrait as _,
     StackTrait,
 };
 use snarkvm_synthesizer_snark::ProvingKey;

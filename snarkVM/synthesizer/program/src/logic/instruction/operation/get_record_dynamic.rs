@@ -19,21 +19,8 @@ use console::{
     collections::merkle_tree::MerklePath,
     network::prelude::*,
     program::{
-        Access,
-        Address,
-        DynamicRecord,
-        Entry,
-        Field,
-        Identifier,
-        Plaintext,
-        PlaintextType,
-        RECORD_DATA_TREE_DEPTH,
-        Register,
-        RegisterType,
-        ToField as ConsoleToField,
-        ToFields as ConsoleToFields,
-        U64,
-        Value,
+        Access, Address, DynamicRecord, Entry, Field, Identifier, Plaintext, PlaintextType, RECORD_DATA_TREE_DEPTH,
+        Register, RegisterType, ToField as ConsoleToField, ToFields as ConsoleToFields, U64, Value,
     },
 };
 
